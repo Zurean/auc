@@ -38,7 +38,7 @@ class AuctionStatus
 
     private function __construct(string $value)
     {
-        $this->value = self::STATUS_CREATED;
+        $this->value = $value;
     }
 
     public static function create(): self
@@ -64,6 +64,11 @@ class AuctionStatus
     public function setPaused(): void
     {
         $this->value = self::STATUS_PAUSED;
+    }
+
+    public function isFalling(): bool
+    {
+        return $this->value === self::STATUS_FALLING;
     }
 }
 

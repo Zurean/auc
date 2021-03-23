@@ -83,4 +83,14 @@ class Auction
     {
         return $this->minOutbid;
     }
+
+    public function isFalling(): bool
+    {
+        return $this->status->isFalling();
+    }
+
+    public function getStartTime(): ?DateTimeImmutable
+    {
+        return $this->startTime;
+    }
 }
