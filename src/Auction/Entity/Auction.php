@@ -3,6 +3,7 @@
 namespace App\Auction\Entity;
 
 use App\Identify\Entity\Id;
+use DateTimeImmutable;
 
 class Auction
 {
@@ -21,6 +22,8 @@ class Auction
     private FallInterval $fallInterval;
 
     private int $minOutbid;
+
+    private ?DateTimeImmutable $startTime = null;
 
     public function __construct(
         Id $id,
