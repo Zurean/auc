@@ -18,7 +18,7 @@ class Auction
 
     private int $fallStep;
 
-    private int $fallInterval;
+    private FallInterval $fallInterval;
 
     private int $minOutbid;
 
@@ -29,7 +29,7 @@ class Auction
         Price $startPrice,
         Price $minPrice,
         int $fallStep,
-        int $fallInterval,
+        FallInterval $fallInterval,
         int $minOutbid
     )
     {
@@ -74,7 +74,7 @@ class Auction
         return $this->fallStep;
     }
 
-    public function getFallInterval(): int
+    public function getFallInterval(): FallInterval
     {
         return $this->fallInterval;
     }
